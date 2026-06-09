@@ -1,6 +1,20 @@
 # alopecia_simulations
 (DA) Sample size estimations for induced alopecia project using a biologically structured stochastic disease progression simulator + mixed-model power engine.
 
+There are essentially two versions of the same model here, `simulate_power.py` and `batch_simulate.py` which work on standalone or multi-core systems (the latter through a `SLURM` job submission system (or equivalent, although example `sbatch` script is provided here if `SLURM` is your system of choice).
+
+**Npte**. This is far from a *perfect* solution, but rather a series of assumptions, approximations (and probably some terrible oversights). Please take a look at the **Assumptions**, **Logic** and **Limitations** sections below and interpret any results with an appropriate amount of caution.
+
+## Prerequisites
+
+```python
+numpy
+pandas
+json
+statsmodels
+matplotlib
+```
+
 ## Assumptions
 
 * Penetrance is fixed and independent
